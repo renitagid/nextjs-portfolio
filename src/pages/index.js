@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="m-10 flex w-4/5 flex-row justify-between rounded-xl bg-highlight p-20">
+        <div className="m-10 flex w-8/9 flex-row justify-between rounded-xl bg-highlight p-20">
           <div className="text-center font-serif">
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             <h1 className="text-5xl">Hi! I'm Renita!</h1>
