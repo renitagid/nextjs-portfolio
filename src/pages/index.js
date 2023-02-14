@@ -17,11 +17,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="bg-white">
         <div className="m-10 flex w-8/9 flex-row justify-between rounded-xl bg-highlight p-20">
           <div className="text-center font-serif">
             {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <h1 className="text-5xl">Hi! I'm Renita!</h1>
+            <h1 className="text-5xl p-4 text-center font-bold bg-gradient-to-r from-red-500 via-yellow-500 to-cyan-500 bg-clip-text text-transparent">Hi! I'm Renita!</h1>
             <h2 className="text-2xl">Welcome to my portfolio.</h2>
             <div className="pt-10">This is my 30 second elevator pitch, where I'm going to tell you a few enticing things about myself! It might be more like 10 seconds if we're being honest.</div>
           </div>

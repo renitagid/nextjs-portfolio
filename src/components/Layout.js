@@ -2,9 +2,11 @@ import Header from "./Header";
 
 export default function Layout({ children }) {
     return (
-      <body  className="h-screen bg-secondary pt-3">
+      <>
+      <div className="h-screen bg-white">
         <Header />
         <main>{children}</main>
-      </body>
+        </div>
+      </>
     )
   }
