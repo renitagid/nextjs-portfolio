@@ -4,7 +4,6 @@ import burger from "public/burger.png";
 
 import close from "public/x.png";
 import Image from "next/image";
-import Link from "next/link";
 
 const Header = () => {
   const [buttonMenu, setButtonMenu] = useState("invisible");
@@ -16,9 +15,9 @@ const Header = () => {
     }
   };
   return (
-    <div className="flex justify-center">
+    <div className="flex">
       <nav
-        className={`${buttonMenu} absolute z-10 w-full flex-col border-b-2  border-gray-400 bg-gradient-to-b from-red-300 via-yellow-200 to-cyan-100 object-center p-10 font-serif  md:visible md:mt-5  md:flex md:w-11/12 md:flex-row md:justify-evenly
+        className={`${buttonMenu} absolute z-10 w-full flex-col border-b-2  border-gray-400 bg-gradient-to-b from-red-300 via-yellow-100 to-cyan-100 p-10 font-serif  md:visible md:mt-5  md:flex md:w-11/12 md:flex-row md:justify-evenly
       
       md:rounded-xl md:bg-gradient-to-r md:p-3 md:shadow-lg md:shadow-gray-500
       `}

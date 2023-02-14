@@ -5,8 +5,8 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header";
-import project from 'public/project.png'
-const inter = Inter({ subsets: ["latin"] });
+import project from "public/project.png";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -18,21 +18,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-white">
-        <div className="m-10 flex w-8/9 flex-row justify-between rounded-xl bg-highlight p-20">
+        <div className="w-8/9 bg-highlight m-10 flex flex-col justify-between rounded-xl p-20">
           <div className="text-center font-serif">
             {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <h1 className="text-5xl p-4 text-center font-bold bg-gradient-to-r from-red-500 via-yellow-500 to-cyan-500 bg-clip-text text-transparent">Hi! I'm Renita!</h1>
+            <h1 className="bg-gradient-to-r from-red-500 via-yellow-500 to-cyan-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+              Hi! I'm Renita!
+            </h1>
             <h2 className="text-2xl">Welcome to my portfolio.</h2>
-            <div className="pt-10">This is my 30 second elevator pitch, where I'm going to tell you a few enticing things about myself! It might be more like 10 seconds if we're being honest.</div>
+            <div className="pt-10">
+              This is my 30 second elevator pitch, where I'm going to tell you a
+              few enticing things about myself! It might be more like 10 seconds
+              if we're being honest.
+            </div>
           </div>
-          <div className="relative w-500 m-10 font-serif">
-          <Link href="/projects">
+          <div className="w-500 relative m-10 font-serif">
+            {/* <Link href="/projects"> */}
             My favorite project:
-          <Image
-            src={project}
-            alt="preview of project"
-          />
-          </Link>
+            <motion.div>
+              <Image src={project} alt="preview of project" />
+            </motion.div>
+            {/* </Link> */}
           </div>
         </div>
       </main>

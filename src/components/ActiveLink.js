@@ -26,9 +26,9 @@ const ActiveLink = ({ router, href, isLeftSideBar = false, children }) => {
   return (
     <div className="m-3">
     <Link
-      className={`ml-20 px-2 font-serif text-2xl ${
+      className={`ml-20 px-2 py-1 font-serif text-2xl ${
         isCurrentPath
-          ? "rounded-full border-2 border-solid bg-white shadow-md shadow-gray-700"
+          ? "rounded-full bg-white shadow-md shadow-gray-700"
           : ""
       } `}
       href={href}
