@@ -1,39 +1,58 @@
 import React, { useState } from "react";
-import Image from "next/image"
-import project1Image from "public/project.png"
+import Image from "next/image";
+import projectData from "../data/projectData.js";
 
 const Projects = () => {
   const [project, setProject] = useState("");
-  const [projectInfo, setProjectInfo] = useState("");
-  const handleChange = (e) => {
-    setProject(e.target.value);
+  const [menu, setMenu] = useState("collapse");
+  const handleClick = (id) => {
+    setProject(projectData[id-1]);
+    handleMenu()
   };
 
+  const handleMenu = () => {
+    if (menu === "collapse") {
+      setMenu("visible")
+    } else if (menu === "visible") {
+      setMenu("collapse")
+    }
+    console.log(menu)
+  } 
+console.log(project)
   return (
-    <section className="font-serif m-2">
+    <section className="m-2 font-serif ">
       <h1 className="text-xl">My projects</h1>
-      <div>
-        <label for="projects">Choose a project:</label>
+      <button onClick={handleMenu}>Choose:</button>
 
-        <select name="projects" id="projects" onChange={handleChange}>
-          <option></option>
-          <option value="project1">Capstone Project</option>
-          <option value="project2">Data Visualization Project</option>
-          <option value="project3">Project 3</option>
-          <option value="project4">Project 4</option>
-        </select>
-        {project === "project1" ? (
-          <div>Capstone Project
-            <Image src={project1Image} alt="project 1 image" />
+      <div className={`flex flex-col ${menu}`}>
+      {projectData?.map((project, index) => {
+        return <button key={index}  onClick={() => handleClick(project.id)}>
+          <div className="">
+          {project.title}
           </div>
-        ) : project === "project2" ? (
-          <div>Data Visualization Project</div>
-        ) : project === "project3" ? (
-          <div>Project information about number 3</div>
-        ) :project === "project4" ? (
-          <div>Project information about number 4</div>
-        ) :null}
+          </button>;
+          
+      })}
       </div>
+
+      <div className="flex justify-evenly">
+      {projectData.map((project, index) => {
+        return (
+          <div key={index} className="">
+            <Image src={project.image} alt="pic" className="w-16" />
+          </div>
+        );
+      })}
+      </div>
+
+      <div>
+      {project?.title}
+      </div>
+      <div>{project?.description}</div>
+      <div>
+      {project?.image && <Image src={project.image} alt="project preview" />}
+      </div>
+
     </section>
   );
 };
