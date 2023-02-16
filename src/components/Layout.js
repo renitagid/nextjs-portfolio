@@ -7,7 +7,7 @@ export default function Layout({ children }) {
       <>
       <div className="h-screen bg-white text-black dark:bg-neutral-800 dark:text-white">
         <Header />
-        <main className="font-jost">{children}</main>
+        <main className="font-jost absolute top-0">{children}</main>
         </div>
       </>
     )

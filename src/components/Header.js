@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div className="flex font-jost">
       <nav
-        className={`${buttonMenu} absolute top-0 z-10 w-full flex-col shadow-lg shadow-gray-700 bg-gradient-to-b from-rose-300 via-red-300 to-amber-200 p-10 md:visible md:mt-5  md:flex md:w-11/12 md:flex-row md:justify-evenly
+        className={`${buttonMenu} absolute top-0 z-10 w-full flex-col shadow-lg shadow-gray-700 bg-gradient-to-b from-rose-300 via-amber-200 to-orange-300 p-10 md:visible md:mt-5  md:flex md:w-11/12 md:flex-row md:justify-evenly
       dark:from-rose-800 dark:via-red-800 dark:to-amber-700
       md:rounded-xl md:bg-gradient-to-r md:p-3 md:shadow-lg md:shadow-gray-500 dark:shadow-black
       `}
