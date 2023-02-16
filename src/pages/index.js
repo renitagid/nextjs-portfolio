@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <div className="w-8/9 bg-highlight m-3 flex flex-col justify-between rounded-xl pt-12">
+        <div className="w-8/9 bg-highlight m-3 flex flex-col justify-between items-center rounded-xl pt-12">
           <div className="text-center">
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             <h1 className="bg-gradient-to-r from-orange-600 via-rose-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent font-header">
@@ -33,8 +33,8 @@ export default function Home() {
 
             </div>
           </div>
-          <div className="bg-gradient-to-br from-orange-600 via-rose-500 to-amber-400 rounded-xl w-52 h-52 m-10 shadow-lg shadow-gray-700 dark:shadow-black">
-          <div className="bg-white w-48 h-48 m-1 rounded-xl p-2 flex flex-col text-center text-black">
+          <div className="bg-gradient-to-br from-orange-600 via-rose-500 to-amber-400 rounded-xl w-[212px] h-[212px] m-10 shadow-lg shadow-gray-700 dark:shadow-black">
+          <div className="bg-white w-[208px] h-[208px] m-0.5 rounded-xl p-2 flex flex-col text-center text-black">
             <Link href="/projects">
               
             My favorite project:
