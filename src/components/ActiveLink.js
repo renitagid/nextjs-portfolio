@@ -24,11 +24,11 @@ const ActiveLink = ({ router, href, isLeftSideBar = false, children }) => {
   const color = isCurrentPath ? theme : "";
 
   return (
-    <div className="m-3">
+    <div className="m-3 flex justify-center">
     <Link
-      className={`ml-20 px-2 py-1 font-serif text-2xl ${
+      className={` px-2 py-1 text-2xl ${
         isCurrentPath
-          ? "rounded-full bg-white shadow-md shadow-gray-700"
+          ? "rounded-full bg-white bg-opacity-50 shadow-md shadow-gray-700 dark:shadow-black dark:text-black"
           : ""
       } `}
       href={href}

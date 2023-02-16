@@ -20,7 +20,7 @@ const Projects = () => {
   } 
 console.log(project)
   return (
-    <section className="m-2 font-serif ">
+    <section className="m-2">
       <h1 className="text-xl">My projects</h1>
       <button onClick={handleMenu}>Choose:</button>
 

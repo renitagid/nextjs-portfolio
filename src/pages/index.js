@@ -17,27 +17,32 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white">
-        <div className="w-8/9 bg-highlight m-10 flex flex-col justify-between rounded-xl p-20">
-          <div className="text-center font-serif">
+      <main className="">
+        <div className="w-8/9 bg-highlight m-3 flex flex-col justify-between rounded-xl pt-12">
+          <div className="text-center">
             {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <h1 className="bg-gradient-to-r from-red-500 via-yellow-500 to-cyan-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+            <h1 className="bg-gradient-to-r from-orange-600 via-rose-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent font-header">
               Hi! I'm Renita!
             </h1>
             <h2 className="text-2xl">Welcome to my portfolio.</h2>
-            <div className="pt-10">
-              This is my 30 second elevator pitch, where I'm going to tell you a
-              few enticing things about myself! It might be more like 10 seconds
-              if we're being honest.
+            <div className="pt-10 leading-relaxed">
+              I am a full-stack software developer who likes solving problems for fun, building cool things with code, and above all, 
+              <span className="font-pretty text-2xl leading-3">
+              &nbsp;making it pretty.
+              </span>
+
             </div>
           </div>
-          <div className="w-500 relative m-10 font-serif">
-            {/* <Link href="/projects"> */}
+          <div className="bg-gradient-to-br from-orange-600 via-rose-500 to-amber-400 rounded-xl w-52 h-52 m-10 shadow-lg shadow-gray-700 dark:shadow-black">
+          <div className="bg-white w-48 h-48 m-1 rounded-xl p-2 flex flex-col text-center text-black">
+            <Link href="/projects">
+              
             My favorite project:
             <motion.div>
-              <Image src={project} alt="preview of project" />
+              <Image src={project} alt="preview of project" className="hover:hue-rotate-180"/>
             </motion.div>
-            {/* </Link> */}
+            </Link>
+          </div>
           </div>
         </div>
       </main>
