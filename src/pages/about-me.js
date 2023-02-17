@@ -44,8 +44,10 @@ export default function AboutMe() {
           <p className="mb-2">
             I am a career transitioner - I spent 12 years in the field of ABA,
             teaching new skills to kids with autism, and training my staff to do
-            the same. Now I've changed trajectories, and am building websites
-            and coding solutions to completely different kinds of problems. To
+            the same. Now I've changed trajectories, and I'm building websites
+            and coding solutions to completely different kinds of problems. 
+            
+            To
             give some more personal insight into who I am, I'm also a mom, run
             an Etsy shop for wooden puzzles and hand-felted wool crafts,
             complete the NYT crossword puzzle daily, and just helped my team win

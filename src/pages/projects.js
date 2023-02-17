@@ -23,8 +23,8 @@ const Projects = () => {
   };
   console.log(project);
   return (
-    <section className="m-2 md:flex">
-      <h1 className="font-header text-xl md:invisible">My projects:</h1>
+    <section className="m-2 mx-4 md:flex w-full">
+      <h1 className="font-header text-xl md:invisible">My projects:&nbsp;</h1>
       <div className="z-10 flex flex-col md:mr-4 dark:text-black
       
       ">
@@ -55,14 +55,14 @@ const Projects = () => {
         </div>
         {project.problem && <div className="ml-5 whitespace-pre-line text-xs mt-3">The problem: {project.problem}</div>}
         {project.solution && <div className="ml-5 whitespace-pre-line text-xs mt-3">The solution: {project.solution}</div>}
-        <div className="bg-gradient-to-br from-orange-600 via-rose-500 to-amber-400 rounded-xl w-[300px] h-[300px] mt-3 mx-0 md:ml-2 shadow-md shadow-gray-700 dark:shadow-black">
+        <div className="bg-gradient-to-br from-orange-600 via-rose-500 to-amber-400 rounded-xl w-[300px] h-[300px] mt-3 mx-4 md:ml-2 shadow-md shadow-gray-700 dark:shadow-black">
           <div className="w-[296px] h-[296px] bg-white m-0.5 relative top-0.5 rounded-xl object-cover">
           {project?.image && (
             <Image src={project.image} alt="project preview"  className="rounded-xl h-[296px] object-cover"/>
           )}
           </div>
 
-        <div className="mx-3 whitespace-pre-line text-xs mt-3">{project?.description}</div>
+        <div className="mx-3 whitespace-pre-line text-xs mt-3 pb-5">{project?.description}</div>
         </div>
       </div>
     </section>
