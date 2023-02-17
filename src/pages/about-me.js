@@ -17,7 +17,7 @@ import { faGem } from "@fortawesome/free-solid-svg-icons";
 export default function AboutMe() {
   return (
     <div className="md:px-20">
-      <div className="mt-2 flex flex-col items-center md:flex-row md:justify-evenly">
+      <div className="mt-2 md:mt-0 flex flex-col items-center md:flex-row md:justify-evenly">
         <h1 className="mt-2 font-header text-4xl">About Me</h1>
         <div className="m-2 h-[110px] w-[110px] rounded-full bg-gradient-to-br from-orange-600 via-rose-400 to-amber-300 shadow-sm shadow-gray-700 dark:shadow-black">
           <Image
@@ -39,7 +39,7 @@ export default function AboutMe() {
         </div>
       </section>
       <div className=" m-2 mx-4 h-[300px] md:h-[300px] rounded-xl bg-gradient-to-br from-orange-400 to-amber-300 object-center shadow-md shadow-gray-500 dark:shadow-black overflow-hidden border-2 border-transparent">
-        <div className="overflow-scroll relative h-[296px] rounded-xl bg-white object-center p-4 dark:bg-neutral-700 ">
+        <div className="overflow-scroll dark:overflow-auto relative h-[296px] rounded-xl bg-white object-center p-4 dark:bg-neutral-700 ">
           <h1 className="font-pretty text-xl">My story:</h1>
           <p className="mb-2">
             I am a career transitioner - I spent 12 years in the field of ABA,
