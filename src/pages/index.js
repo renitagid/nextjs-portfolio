@@ -25,7 +25,7 @@ export default function Home() {
               Hi! I'm Renita!
             </h1>
             <h2 className="text-2xl">Welcome to my portfolio.</h2>
-            <div className="pt-10 leading-relaxed">
+            <div className="pt-10 leading-relaxed md:px-32">
               I am a full-stack software developer who likes solving problems for fun, building cool things with code, and above all, 
               <span className="font-pretty text-2xl leading-3">
               &nbsp;making it pretty.

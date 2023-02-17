@@ -7,7 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const Contact = () => {
   return (
     <main>
-      <div className="fixed right-0 left-0 top-6 flex flex-col items-center">
+      <div className="fixed right-0 left-0 top-3 md:top-20 flex flex-col items-center">
         <div className="font-header">Find me online:</div>
         <div className="flex w-[220px] justify-evenly p-2">
           <div>

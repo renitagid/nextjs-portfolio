@@ -53,9 +53,9 @@ export const MessageForm = () => {
     <div className="grid absolute left-0 right-0 top-24 justify-center">
 
       <p className="text-center font-header">...or send me a message!</p>
-      <div className="m-2 h-[400px] w-[300px] rounded-xl bg-gradient-to-br from-orange-400 via-rose-300 to-amber-400">
+      <div className="m-2 h-[350px] w-[300px] rounded-xl bg-gradient-to-br from-orange-400 via-rose-300 to-amber-400">
         <form
-          className="m-0.5 h-[396px] rounded-xl bg-white dark:bg-neutral-600 p-2"
+          className="m-0.5 h-[346px] rounded-xl bg-white dark:bg-neutral-600 p-2"
           ref={form}
           onSubmit={sendEmail}
         >
@@ -84,7 +84,7 @@ export const MessageForm = () => {
           </div>
           <div>
             <textarea
-              className="h-36 w-full border-2 bg-gray-200 mb-1 pl-0.5 dark:text-black"
+              className="h-24 w-full border-2 bg-gray-200 mb-1 pl-0.5 dark:text-black"
               name="message"
             />
           </div>
@@ -94,7 +94,7 @@ export const MessageForm = () => {
       </div>
           <div className="flex justify-center">
             <input
-              className="rounded-full  border-2 bg-gradient-to-br px-2"
+              className="rounded-full bg-gradient-to-br px-2"
               type="submit"
               value="Send"
             />

@@ -16,20 +16,19 @@ import { faGem } from "@fortawesome/free-solid-svg-icons";
 
 export default function AboutMe() {
   return (
-    <div className="">
-      <div className="mt-2 flex flex-col items-center">
+    <div className="md:px-20">
+      <div className="mt-2 flex flex-col items-center md:flex-row md:justify-evenly">
         <h1 className="mt-2 font-header text-4xl">About Me</h1>
-        <div className="m-2 h-[120px] w-[120px] rounded-full bg-gradient-to-br from-orange-600 via-rose-400 to-amber-300 shadow-md shadow-gray-700 dark:shadow-black">
+        <div className="m-2 h-[110px] w-[110px] rounded-full bg-gradient-to-br from-orange-600 via-rose-400 to-amber-300 shadow-sm shadow-gray-700 dark:shadow-black">
           <Image
             src={profile}
             alt=""
-            className="m-0.5 h-[116px] w-[116px] rounded-full "
+            className="m-0.5 h-[106px] w-[106px] rounded-full "
           />
         </div>
       </div>
-      <section className="m-2 rounded-xl object-center p-2">
-        <h3 className="text-xl">Technical Skills:</h3>
-        <div className="flex justify-evenly">
+      <section className="m-2 mt-0 rounded-xl object-center p-2">
+        <div className="flex justify-evenly md:text-3xl">
           <FontAwesomeIcon icon={faReact} />
           <FontAwesomeIcon icon={faSquareJs} />
           <FontAwesomeIcon icon={faGit} />
@@ -39,8 +38,8 @@ export default function AboutMe() {
           <FontAwesomeIcon icon={faBootstrap} />
         </div>
       </section>
-      <div className=" m-2 mx-4 h-[400px] w-5/6 rounded-xl bg-gradient-to-br from-orange-600 via-rose-400 to-amber-300 object-center shadow-md shadow-gray-500 dark:shadow-black">
-        <div className="overflow-scroll relative top-0.5 m-0.5 h-[396px] rounded-xl bg-white object-center p-4 dark:bg-neutral-700 ">
+      <div className=" m-2 mx-4 h-[300px] md:h-[300px] rounded-xl bg-gradient-to-br from-orange-400 to-amber-300 object-center shadow-md shadow-gray-500 dark:shadow-black overflow-hidden border-2 border-transparent">
+        <div className="overflow-scroll relative h-[296px] rounded-xl bg-white object-center p-4 dark:bg-neutral-700 ">
           <h1 className="font-pretty text-xl">My story:</h1>
           <p className="mb-2">
             I am a career transitioner - I spent 12 years in the field of ABA,
