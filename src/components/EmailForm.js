@@ -1,31 +1,34 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+import { useForm } from "react-hook-form";
+
 export const MessageForm = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+  });
   const [formSubmitted, setFormSubmitted] = useState({
     title: "",
     paragraph: "",
   });
-  const [formContent, setFormContent] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = (formData) => {
     emailjs
-      .sendForm(
+      .send(
         "service_37032nc",
         "template_2n9petq",
-        form.current,
+        formData,
         "OoQVw_OuXULdyT-VU"
       )
       .then(
         ({ status }) => {
           if (status === 200) {
-            e.target.reset();
             setFormSubmitted({
               title: "Message has been sent!",
               paragraph: "Renita will be in contact with you soon.",
@@ -47,17 +50,18 @@ export const MessageForm = () => {
           });
         }
       );
+      
   };
 
   return (
-    <div className="grid absolute left-0 right-0 top-24 justify-center">
+    <div className="justify-center md:text-sm">
 
       <p className="text-center font-header">...or send me a message!</p>
-      <div className="m-2 h-[350px] w-[300px] rounded-xl bg-gradient-to-br from-orange-400 via-rose-300 to-amber-400">
+      <div className="m-2 h-[350px] w-[300px] rounded-lg bg-gradient-to-br from-orange-400 via-rose-300 to-amber-400">
         <form
-          className="m-0.5 h-[346px] rounded-xl bg-white dark:bg-neutral-600 p-2"
+          className="relative top-0.5 m-0.5 h-[346px] rounded-md bg-white dark:bg-neutral-600 p-2"
           ref={form}
-          onSubmit={sendEmail}
+          onSubmit={handleSubmit(sendEmail)}
         >
           <div>
             <label className="">Name</label>
@@ -65,9 +69,19 @@ export const MessageForm = () => {
           <div>
             <input
               className="w-full bg-gray-200 mb-1 pl-0.5 dark:text-black"
+              id="user_name"
               type="text"
               name="user_name"
+              {...register("user_name", { required: true })}
             />
+            {errors.user_name && (
+              <div
+                style={{ color: "red" }}
+                className="invalid-feedback d-block"
+              >
+                Please fill out this field.
+              </div>
+            )}
           </div>
           <div>
             <label className="">Your Email</label>
@@ -75,9 +89,19 @@ export const MessageForm = () => {
           <div>
             <input
               className="w-full border-2 bg-gray-200 mb-1 pl-0.5 dark:text-black"
+              id="user_email"
               type="email"
               name="user_email"
-            />
+              {...register("user_email", { required: true })}
+              />
+              {errors.user_email && (
+              <div
+                style={{ color: "red" }}
+                className="invalid-feedback d-block"
+              >
+                Please fill out this field.
+              </div>
+            )}
           </div>
           <div>
             <label className="">Message</label>
@@ -85,8 +109,18 @@ export const MessageForm = () => {
           <div>
             <textarea
               className="h-24 w-full border-2 bg-gray-200 mb-1 pl-0.5 dark:text-black"
+              id="message"
               name="message"
+              {...register("message", { required: true })}
             />
+            {errors.message && (
+              <div
+                style={{ color: "red" }}
+                className="invalid-feedback d-block"
+              >
+                Please fill out this field.
+              </div>
+            )}
           </div>
           <div className="text-center">
         <h3>{formSubmitted.title}</h3>
