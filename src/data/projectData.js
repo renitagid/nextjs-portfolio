@@ -12,12 +12,18 @@ const projectData = [
     github: "https://github.com/renitagid/Didjadoo",
     demo: "https://didjadoo.onrender.com/",
     description: `I was the tech lead on a team of 4 members.
-        - This dynamic full-stack app allows users to set and track goals, view others' goals and cheer them on with likes.
-        - Multiple relational tables with a variety of data types stored in each table.
-        - Achieved 90% test coverage with Jest and Rspec.
-        - Currently developing the ability to friend users as well as leave comments on a user's page.
-        - React front-end, with Rails on the back end, and a PostgreSQL database.
-        - This app has full CRUD capabilities and utilizes RESTful routing.`,
+    
+        · This dynamic full-stack app allows users to set and track goals, view others' goals and cheer them on with likes. 
+
+        · Multiple relational tables with a variety of data types are stored in each table.
+
+        · We achieved 90% test coverage with Jest and Rspec.
+
+        · Currently developing the ability to friend users as well as leave comments on a user's page.
+
+        · React front-end, with Rails on the back end, and a PostgreSQL database.
+
+        · This app has full CRUD capabilities and utilizes RESTful routing.`,
     image: project1Image,
   },
   {

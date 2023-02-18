@@ -40,7 +40,7 @@ export default function AboutMe() {
       </section>
       <div className=" m-2 mx-4 h-[300px] md:h-[300px] rounded-xl bg-gradient-to-br from-orange-400 to-amber-300 object-center shadow-md shadow-gray-500 dark:shadow-black overflow-hidden border-2 border-transparent">
         <div className="overflow-scroll dark:overflow-auto relative h-[296px] rounded-xl bg-white object-center p-4 dark:bg-neutral-700 ">
-          <h1 className="font-pretty text-xl">My story:</h1>
+          <h1 className="font-semibold">My story:</h1>
           <p className="mb-2">
             I am a career transitioner - I spent 12 years in the field of ABA,
             teaching new skills to kids with autism, and training my staff to do
@@ -55,7 +55,7 @@ export default function AboutMe() {
             hiring someone who doesn't have 5-10 years of experience coding?
             Here's what else I bring to the table..
           </p>
-          <h2 className="font-pretty text-xl">Creative Problem Solving</h2>
+          <h2 className="font-semibold">Creative Problem Solving</h2>
           <p className="mb-2">
             My entire career has been about creative problem solving! In the
             field of ABA, the main philosophy is analyzing a problem, breaking
@@ -64,7 +64,7 @@ export default function AboutMe() {
             more to human behavior, but the same principles can be applied to
             coding!
           </p>
-          <h2 className="font-pretty text-xl">Project Management</h2>
+          <h2 className="font-semibold">Project Management</h2>
           <p className="mb-2">
             During my time as assistant director of a small ABA clinic, I helped
             manage several projects involving time management systems,
@@ -73,15 +73,14 @@ export default function AboutMe() {
             development as well, to stay on top of all the various elements of a
             project and get it deployed within the timeline that is expected.
           </p>
-          <h2 className="font-pretty text-xl">Supervising and Leading a Team</h2>
+          <h2 className="font-semibold">Supervising and Leading a Team</h2>
           <p className="mb-2">
             As a clinical supervisor, my key responsibilities included training,
             mentoring, coaching, and providing feedback to my staff. I have
             extensive experience providing feedback effectively, managing
-            conflicts between team members, and presenting information in a way
             that is clear, accessible, and actionable
           </p>
-          <h2 className="font-pretty text-xl">Managing Stakeholder Expectations</h2>
+          <h2 className="font-semibold">Managing Stakeholder Expectations</h2>
           <p className="mb-2">
             I was typically the main contact point for parents whose children
             were receiving therapy, which has given me almost a decade of

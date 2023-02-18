@@ -21,10 +21,10 @@ export const MessageForm = () => {
   const sendEmail = (formData) => {
     emailjs
       .send(
-        "service_37032nc",
-        "template_2n9petq",
+        SERVICE,
+        TEMPLATE,
         formData,
-        "OoQVw_OuXULdyT-VU"
+        PUBLIC_KEY
       )
       .then(
         ({ status }) => {
