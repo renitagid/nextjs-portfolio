@@ -32,7 +32,9 @@ export default function Home() {
         <div className="w-8/9 bg-highlight m-3 flex flex-col items-center justify-between rounded-xl pt-12 md:m-6 md:pt-0">
           <div className="text-center">
             {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <h1 className="bg-gradient-to-br from-orange-600 via-amber-500 to-rose-600 bg-clip-text text-center font-header text-6xl font-bold text-transparent">
+            <h1 className="bg-gradient-to-br from-orange-600 via-amber-500 to-rose-600 bg-clip-text text-center font-header text-6xl font-bold text-transparent
+            
+            dark:bg-gradient-to-r dark:from-rose-700 dark:via-amber-600 dark:to-rose-700">
               Hi, I'm Renita!
             </h1>
             <h2 className="text-2xl">Welcome to my portfolio.</h2>

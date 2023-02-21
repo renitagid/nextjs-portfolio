@@ -7,7 +7,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
   const [project, setProject] = useState(projectData[0]);
-  const [button,  setButton] = useState("rounded-xl")
+  const [button, setButton] = useState("rounded-xl");
   const [menu, setMenu] = useState("hidden -z-20");
   const handleClick = (id) => {
     setProject(projectData[id - 1]);
@@ -17,25 +17,24 @@ const Projects = () => {
   const handleMenu = () => {
     if (menu === "hidden -z-20") {
       setMenu("visible");
-      setButton("rounded-t-xl")
+      setButton("rounded-t-xl");
     } else if (menu === "visible") {
       setMenu("hidden -z-20");
-      setButton("rounded-xl")
+      setButton("rounded-xl");
     }
-    console.log(menu);
   };
   console.log(project);
   return (
-    <section className="m-2 mx-4 md:mx-0 w-full md:flex ">
-      <h1 className="font-header text-xl md:invisible">My projects:&nbsp;</h1>
+    <section className="mt-6 flex flex-col items-center md:ml-4 md:flex-row md:items-start">
       <div
-        className="z-10 flex flex-col dark:text-black md:mr-4 w-11/12 md:w-[300px]
+        className="z-10 flex w-11/12 flex-col  dark:text-black md:mr-4 md:w-[300px]
       
       "
       >
         <button
           className={`mt-1 ${button}  bg-gradient-to-r from-orange-400 via-amber-200 to-rose-300 p-1 shadow-md shadow-gray-600 
-          md:w-60 md:from-orange-300 md:via-orange-200 md:to-orange-300 md:rounded-t-lg md:rounded-b-none
+          dark:shadow-black md:w-60 md:rounded-t-lg md:rounded-b-none md:from-orange-300 md:via-orange-200
+          md:to-orange-300
           `}
           onClick={handleMenu}
         >
@@ -59,9 +58,9 @@ const Projects = () => {
 
       <div
         id="all-project-info"
-        className="mx-0 w-11/12 pt-2 flex flex-col md:flex-row md:flex-wrap justify-center"
+        className="align-center mx-0 flex w-11/12 flex-col items-center pt-2 md:flex-row md:flex-wrap md:items-start md:justify-start"
       >
-        <div id="info column" className="order-1 md:w-[300px]">
+        <div id="info column" className="order-1 md:mx-3 md:w-[300px]">
           <div className="text-center font-header text-xl">
             {project?.title}
           </div>
@@ -70,7 +69,7 @@ const Projects = () => {
               <FontAwesomeIcon icon={faGithub} /> Github Repo
             </a>
             <a href={project.demo} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faStar} /> Project Demo
+              <FontAwesomeIcon icon={faStar} /> Deployed Project
             </a>
           </div>
           {project.problem && (
@@ -86,19 +85,31 @@ const Projects = () => {
             </div>
           )}
         </div>
-        <div className="order-3 md:order-2 mx-3 mt-3 w-[300px] whitespace-pre-line pb-5 text-sm">
-          {project?.description}
-        </div>
-        <div id="image-container" className="order-2 md:order-3 mx-4 mt-3 h-[300px] w-[300px] rounded-xl bg-gradient-to-br from-orange-600 via-rose-500 to-amber-400 shadow-md shadow-gray-700 dark:shadow-black md:mt-0 md:ml-5">
-          <div className="relative top-0.5 m-0.5 h-[296px] w-[296px] rounded-xl bg-white object-cover">
-            {project?.image && (
+        <div
+          id="image-container"
+          className="order-2 my-3  w-[300px] rounded-xl bg-gradient-to-br from-orange-600 via-rose-500 to-amber-400 shadow-md shadow-gray-700 dark:shadow-black md:order-3 md:mt-0 md:mr-20"
+        >
+          <div className="m-0.5  w-[296px] overflow-hidden rounded-xl bg-white">
+            {project.video ? (
+              <iframe
+                src={project.video}
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                title="Didjadoo.webm"
+              />
+            ) : project.image ? (
               <Image
                 src={project.image}
                 alt="project preview"
                 className="h-[296px] rounded-xl object-cover"
               />
-            )}
+            ) : null}
           </div>
+        </div>
+        <div className="order-3 w-[300px] whitespace-pre-line px-3 pb-5 text-justify text-sm md:w-[100%] md:pt-4">
+          <p className="font-semibold text-md pb-1">Description:</p>
+          {project?.description}
         </div>
       </div>
     </section>
