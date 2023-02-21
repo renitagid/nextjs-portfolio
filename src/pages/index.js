@@ -29,7 +29,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="w-8/9 bg-highlight m-3 md:m-6 flex flex-col items-center justify-between rounded-xl pt-12 md:pt-0">
+        <div className="w-8/9 bg-highlight m-3 flex flex-col items-center justify-between rounded-xl pt-12 md:m-6 md:pt-0">
           <div className="text-center">
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             <h1 className="bg-gradient-to-br from-orange-600 via-amber-500 to-rose-600 bg-clip-text text-center font-header text-6xl font-bold text-transparent">
@@ -44,10 +44,11 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <motion.div 
-            whileHover={{ rotate: [5, -5, 5, -5, 0] }}
-            transition={{ duration: 3}}
-          className="m-10 h-[212px] w-[212px] rounded-xl bg-gradient-to-br from-orange-600 via-rose-500 to-amber-400 shadow-lg shadow-gray-700 dark:shadow-black">
+          <motion.div
+            whileHover={{ rotate: [0, 3, -3, 3, -3, 0], scale: 1.1 }}
+            transition={{ duration: 1 }}
+            className="m-10 h-[212px] w-[212px] rounded-xl bg-gradient-to-br from-orange-600 via-rose-500 to-amber-400 shadow-lg shadow-gray-700 dark:shadow-black"
+          >
             <div className="m-0.5 flex h-[208px] w-[208px] flex-col rounded-xl bg-white p-2 text-center text-sm text-black">
               <Link href="/projects">
                 Take a look at some of my favorite projects:

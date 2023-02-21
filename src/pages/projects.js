@@ -7,7 +7,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
   const [project, setProject] = useState(projectData[0]);
-  const [button,  setButton] = useState("md:rounded-t-xl rounded-xl")
+  const [button,  setButton] = useState("rounded-xl")
   const [menu, setMenu] = useState("hidden -z-20");
   const handleClick = (id) => {
     setProject(projectData[id - 1]);
@@ -17,10 +17,10 @@ const Projects = () => {
   const handleMenu = () => {
     if (menu === "hidden -z-20") {
       setMenu("visible");
-      setButton("md:rounded-t-xl rounded-t-xl")
+      setButton("rounded-t-xl")
     } else if (menu === "visible") {
       setMenu("hidden -z-20");
-      setButton("md:rounded-t-xl rounded-xl")
+      setButton("rounded-xl")
     }
     console.log(menu);
   };
@@ -34,8 +34,8 @@ const Projects = () => {
       "
       >
         <button
-          className={`mt-1 ${button} bg-gradient-to-r from-orange-400 via-amber-200 to-rose-300 p-1 shadow-md shadow-gray-600 
-          md:w-60 md:from-orange-300 md:via-orange-200 md:to-orange-300
+          className={`mt-1 ${button}  bg-gradient-to-r from-orange-400 via-amber-200 to-rose-300 p-1 shadow-md shadow-gray-600 
+          md:w-60 md:from-orange-300 md:via-orange-200 md:to-orange-300 md:rounded-t-lg md:rounded-b-none
           `}
           onClick={handleMenu}
         >
@@ -59,7 +59,7 @@ const Projects = () => {
 
       <div
         id="all-project-info"
-        className="mx-0 w-11/12 pt-2 flex flex-col md:flex-row justify-center"
+        className="mx-0 w-11/12 pt-2 flex flex-col md:flex-row md:flex-wrap justify-center"
       >
         <div id="info column" className="order-1 md:w-[300px]">
           <div className="text-center font-header text-xl">
