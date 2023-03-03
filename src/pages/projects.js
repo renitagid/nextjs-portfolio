@@ -6,7 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
-  const [project, setProject] = useState(projectData[0]);
+  const [project, setProject] = useState(projectData[3]);
   const [button, setButton] = useState("rounded-xl");
   const [menu, setMenu] = useState("hidden -z-20");
   const handleClick = (id) => {
