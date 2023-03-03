@@ -1,6 +1,7 @@
 import project1Image from "public/project1.png";
 import project2Image from "public/project2.png";
 import project3Image from "public/project3.png";
+import project4Image from "public/project4.png";
 
 const projectData = [
   {
@@ -48,6 +49,16 @@ const projectData = [
     demo: "",
     description: "Description of Portfolio Project",
     image: project3Image,
+  },
+  {
+    id: 4,
+    title: "California Parks App",
+    problem: "The website for California Coast's parks is not mobile friendly and is difficult to navigate.",
+    solution: "A mobile friendly app that allows users to search for parks by name, location, or activity.",
+    github: "https://github.com/renitagid/keeptrack",
+    demo: "https://california-parks.vercel.app/",
+    description: "The California Coast app allows users to search for parks projects by name, location, or activity, as well as view a list of all parks. It was built using React and utilizes Redux for state management, and Material UI for styling.",
+    image: project4Image,
   }
 ];
 export default projectData;
